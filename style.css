@@ -1,3 +1,41 @@
-.test {
-  background-color: red;
+body {
+  margin: 0;
+  padding: 0;
 }
+
+.word{
+
+  height: 50vh;
+  width: 50vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(50%, 50%);
+}
+
+.button{
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    margin: 50px 0;
+    border: solid 1px black;
+    border-radius: 5px;
+}
+
+.word-style {
+  font-size: 50px;
+}
+
+.definition-style {
+  font-size: 30px;
+}
+
+@media (max-width: 600px){
+  .word {
+    width: 100%;
+    transform: translate(0, 50%);
+  }
+}
+
