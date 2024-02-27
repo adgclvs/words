@@ -7,14 +7,15 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <nav>
-      <button id="goToHome">Home</button>
-      <button id="goToPage1">Go To Page 1</button>
-      <button id="goToPage2">Go To Page 2</button>
-    </nav>
     <section id="home">
-      <h1>Welcome to the Home Page</h1>
+      <h1>Learn Words</h1>
     </section>
+    <nav id="nav">
+      <button id="goToHome">Home</button>
+      <button id="goToPage1">All Words</button>
+      <button id="goToPage2">New Words</button>
+      <button id="goToPage3">Edit</button>
+    </nav>
     <section id="page1" class="hidden">
       <div class="word"></div>
       <div class="button">
@@ -23,6 +24,9 @@
     </section>
     <section id="page2" class="hidden">
       <h1>coucou</h1>
+    </section>
+    <section id="page3" class="hidden">
+      <ul class="list"></ul>
     </section>
     <script src="./index.js"></script>
   </body>
