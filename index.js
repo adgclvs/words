@@ -6,6 +6,31 @@ const words = [
   { word: "boys", def: "sdafae" },
 ];
 
+function navigateTo(pageId) {
+  document.querySelectorAll("section").forEach((section) => {
+    section.classList.add("hidden");
+  });
+
+  document.getElementById(pageId).classList.remove("hidden");
+
+  if (pageId === "home") {
+    document.getElementById("goToHome").classList.add("hidden");
+    document.getElementById("goToPage1").classList.remove("hidden");
+    document.getElementById("goToPage2").classList.remove("hidden");
+  } else {
+    document.getElementById("goToHome").classList.remove("hidden");
+    document.getElementById("goToPage1").classList.add("hidden");
+    document.getElementById("goToPage2").classList.add("hidden");
+  }
+}
+
+document.getElementById("goToHome").addEventListener("click", () => navigateTo("home"));
+document.getElementById("goToPage1").addEventListener("click", () => {
+  navigateTo("page1");
+  start();
+});
+document.getElementById("goToPage2").addEventListener("click", () => navigateTo("page2"));
+
 const start = () => {
   const _words = words.slice();
 
@@ -44,4 +69,16 @@ const start = () => {
   });
 };
 
-start();
+// document.getElementById("goToPage1").addEventListener("click", () => {
+//   document.getElementById("page1").classList.remove("hidden");
+//   document.getElementById("page2").classList.add("hidden");
+//   document.getElementById("goToPage1").classList.add("hidden");
+//   document.getElementById("goToPage2").classList.add("hidden");
+// });
+
+// document.getElementById("goToPage2").addEventListener("click", () => {
+//   document.getElementById("page2").classList.remove("hidden");
+//   document.getElementById("page1").classList.add("hidden");
+// });
+
+navigateTo("home");
